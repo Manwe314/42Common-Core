@@ -1,0 +1,30 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   HumanB.hpp                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lkukhale <lkukhale@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/06/23 18:22:11 by lkukhale          #+#    #+#             */
+/*   Updated: 2023/06/23 19:08:41 by lkukhale         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#ifndef HUMANB_HPP
+#define HUMANB_HPP
+#include "Weapon.hpp"
+
+class HumanB
+{
+private:
+	std::string _name;
+	Weapon *_weapon;
+public:
+	HumanB(std::string name);
+	~HumanB();
+	void attack( void );
+	void set_weapon(Weapon &weapon);
+};
+
+
+#endif
