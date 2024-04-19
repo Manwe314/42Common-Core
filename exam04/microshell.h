@@ -6,7 +6,7 @@
 /*   By: lkukhale <lkukhale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/03 19:08:56 by lkukhale          #+#    #+#             */
-/*   Updated: 2024/03/07 18:58:41 by lkukhale         ###   ########.fr       */
+/*   Updated: 2024/04/18 15:15:18 by lkukhale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,22 +26,14 @@
 #define STDOUT 1
 #define STDERR 2
 
-typedef struct s_arguments
-{
-    char * argument;
-    struct s_arguments* next;
-}   t_arg;
 
 typedef struct s_command_list
 {
     char* command;
+    char** arguments;
     int pipe_type;
     int pipes[2];
-    t_arg* arguments;
     struct s_command_list* next;
 } t_clist;
-
-
-
 
 #endif
